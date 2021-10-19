@@ -1,0 +1,23 @@
+* {
+    font-family: Helvetica, Arial, sans-serif
+}
+
+#results-section {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.resultCard {
+    justify-content: space-evenly;
+    padding: 24px;
+    width: 200px;
+    text-align: center;
+    line-height: 6px;
+    border-style: solid;
+    border-color: grey;
+    border-radius: 1px;
+}
+
+audioContainer source {
+max-width: 100%;
+}
