@@ -1,23 +1,50 @@
 * {
-    font-family: Helvetica, Arial, sans-serif
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+#title-section {
+    margin-left: 2em;
+}
+
+#search-section {
+    margin-left: 2em;
 }
 
 #results-section {
+    justify-content: space-evenly;
     display: flex;
     flex-wrap: wrap;
+    margin: auto;
 }
 
 .resultCard {
+    position: relative;
+    margin: 10px;
     justify-content: space-evenly;
     padding: 24px;
     width: 200px;
+    height: 200px;
     text-align: center;
     line-height: 6px;
     border-style: solid;
     border-color: grey;
-    border-radius: 1px;
+    border-width: 1px;
+    border-bottom-left-radius: 10%;
+    border-bottom-right-radius: 10%;
 }
 
-audioContainer source {
-max-width: 100%;
+.audioContainer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    max-width: 100%;
+}
+
+.artistName {
+    line-height: 6px;
+    font-size: 16px;
+}
+
+.songName {
+    font-size: 12px;
 }

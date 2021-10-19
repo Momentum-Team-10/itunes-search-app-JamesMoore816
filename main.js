@@ -12,17 +12,18 @@ searchForm.addEventListener('submit', (event) => {
 })
 
 function searchFor(searchTerm) {
-    console.log(musicAPI + '/search?term=' + searchTerm + '&media=music')
     fetch(musicAPI + '/search?term=' + searchTerm)
-    .then((response) => response.json())
-    .then((data) => {
-        console.log(data)
-        console.log(data.results[0])
-        for(let i = 0; i<data.results.length; i++)
-        {
-            createResult(data.results[i])
-        }
-})
+        .then((response) => response.json())
+        .then((data) => {
+            document.getElementById('results-section').innerHTML = ''
+            console.log(data)
+            console.log(data.results[0])
+            for (let i = 0; i < data.results.length; i++) {
+                if (data.results[i].kind === 'song') {
+                    createResult(data.results[i])
+                }
+            }
+        })
 }
 
 function createResult(data) {
