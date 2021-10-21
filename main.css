@@ -20,6 +20,9 @@
     margin-top: 3em;
 }
 
+#search-input {
+    width: 320px;
+}
 .resultCard {
     position: relative;
     margin: 16px;
