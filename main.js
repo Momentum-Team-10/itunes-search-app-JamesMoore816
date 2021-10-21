@@ -24,20 +24,24 @@ async function searchFor(searchTerm) {
         }
     }
     catch(error) {
+        console.log(error)
         alert('Please try your search again.')
     }
 }
 
 function createResult(data) {
+    // Creates cards for each result and appends them to results section div
     let resultCard = document.createElement('div');
     document.getElementById('results-section').appendChild(resultCard);
     resultCard.classList = "resultCard";
-
+    // Takes thumbnail URL from JSON data to create an img to append to result card
     let thumbnail = document.createElement('img');
     resultCard.appendChild(thumbnail)
     thumbnail.classList = 'thumbnail';
     thumbnail.src = data.artworkUrl100;
-
+    // Creates a div to hold the icon and text of the song title, pulled from the JSON
+    // data and appended to the result card. Titles too long to fit will be truncated
+    // and displayed with an ellipsis.
     let songDiv = document.createElement('div')
     resultCard.appendChild(songDiv)
     let songIcon = document.createElement('i')
@@ -46,7 +50,7 @@ function createResult(data) {
     let songName = document.createElement('p');
     songDiv.appendChild(songName)
     songName.classList = 'songName';
-    if (data.trackName.length > 19) {
+    if (data.trackName.length > 20) {
         songName.textContent = data.trackName.substring(0, 19) + '...'
     }
     else { songName.textContent = data.trackName }
@@ -59,7 +63,7 @@ function createResult(data) {
     let artistName = document.createElement('p')
     artistDiv.appendChild(artistName)
     artistName.classList = 'artistName'
-    if (data.artistName.length > 19) {
+    if (data.artistName.length > 20) {
         artistName.textContent = data.artistName.substring(0, 19) + '...'
     }
     else { artistName.textContent = data.artistName }
@@ -72,7 +76,7 @@ function createResult(data) {
     let albumName = document.createElement('p')
     albumDiv.appendChild(albumName)
     albumName.classList = 'albumName'
-    if (data.collectionName.length > 19) {
+    if (data.collectionName.length > 20) {
         albumName.textContent = data.collectionName.substring(0, 19) + '...'
     }
     else { albumName.textContent = data.collectionName }
