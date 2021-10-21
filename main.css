@@ -1,13 +1,15 @@
 * {
-    font-family: Helvetica, Arial, sans-serif;
+    font-family:Verdana, Geneva, Tahoma, sans-serif
 }
 
 #title-section {
-    margin-left: 2em;
+    /* margin-left: 2em; */
+    text-align: center;
 }
 
 #search-section {
-    margin-left: 2em;
+    text-align: center;
+    padding-bottom: 2em;
 }
 
 #results-section {
@@ -20,33 +22,56 @@
 
 .resultCard {
     position: relative;
-    margin: 10px;
-    justify-content: space-evenly;
-    padding: 24px;
-    width: 200px;
-    height: 200px;
-    text-align: center;
-    line-height: 6px;
+    margin: 16px;
+    padding: 8px;
+    width: 280px;
+    height: 125px;
+    text-align: left;
     border-style: solid;
-    border-color: grey;
     border-width: 1px;
-    background-color: rgb(182, 182, 182);
-    
+    border-color: grey;
+    background-color: #DDDDDD
 }
 
 .audioContainer{
+    display: block;
     position: absolute;
     bottom: 0;
     left: 0;
     max-width: 100%;
-    height: 18px;
+    height: 16px;
+    border-radius: 0%;
 }
 
-.artistName {
-    line-height: 6px;
-    font-size: 16px;
-}
-
-.songName {
+.artistName, .songName, .albumName, .yearInfo {
+    margin-top: 2px;
+    margin-bottom: 4px;
+    margin-left: 8px;
     font-size: 12px;
+}
+
+.artistDiv, .songDiv, .albumDiv, .yearDiv {
+    display: block;
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+
+i {
+    float:inline-start;
+    margin-right: 2px;
+}
+
+.fa-user {
+    margin-right: 4px;
+}
+
+p {
+    display: inline-block;
+    text-align: left;
+}
+
+.thumbnail {
+    float: left;
+    margin-right: 10px;
 }
